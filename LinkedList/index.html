@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Linked List</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <main>
+      <!-- Title -->
+      <h1>Linked List</h1>
+
+      <div class="columns">
+        <!-- Add Section -->
+        <section class="column" id="add-section">
+          <h2>Adding</h2>
+          <div class="input">
+            <input type="number" id="input-number" />
+            <select id="add-options">
+              <option value="first">First</option>
+              <option value="last">Last</option>
+            </select>
+          </div>
+          <button class="button" id="add-btn">Add</button>
+        </section>
+
+        <!-- Remove Section -->
+        <section class="column" id="remove-section">
+          <h2>Removing</h2>
+          <div class="input">
+            <select id="remove-options">
+              <option value="first">First</option>
+              <option value="last">Last</option>
+            </select>
+          </div>
+          <button class="button" id="remove-btn">Remove</button>
+        </section>
+
+        <!-- Options Section -->
+        <section class="column" id="options-section">
+          <h2>Options</h2>
+          <button class="button" id="clear-btn">Clear</button>
+          <button class="button" id="sort-btn">Sort</button>
+        </section>
+      </div>
+
+      <!-- Blocks -->
+      <section class="container" id="node-container">
+        <!-- Nodes will be dynamically added/removed here -->
+      </section>
+    </main>
+    <script src="js/script.js"></script>
+  </body>
+</html>

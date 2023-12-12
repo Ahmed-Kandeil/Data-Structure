@@ -1,0 +1,131 @@
+:root {
+  --primary-color: hsl(204, 70%, 53%);
+
+  --background-light: hsl(0, 0%, 95%);
+
+  --border-light: hsl(0, 0%, 80%);
+  --text-light: hsl(0, 0%, 100%);
+
+  --short-animation-duration: 0.3s;
+  --long-animation-duration: 0.3s;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  font-family: "Arial", sans-serif;
+  background-color: var(--background-light);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.columns {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.column {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 10px;
+}
+
+.input input,
+.input select {
+  padding: 10px;
+  border: 1px solid var(--border-light);
+  border-radius: 5px;
+  transition: border-color var(--short-animation-duration) ease;
+}
+
+.input input {
+  width: 75px;
+}
+
+.input select {
+  margin-left: 10px;
+}
+
+.input input:focus,
+.input select:focus {
+  border-color: var(--primary-color);
+}
+
+.button {
+  padding: 12px 20px;
+  font-size: 1rem;
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color var(--short-animation-duration) ease;
+  width: fit-content;
+}
+
+.button:hover {
+  background-color: hsl(204, 64%, 44%);
+}
+
+.container {
+  width: 100%;
+  max-width: 330px;
+  min-height: 90px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 20px;
+  background-color: var(--text-light);
+  border-radius: 15px;
+  box-shadow: 0 0 10px hsla(0, 0%, 0%, 0.1);
+}
+
+.node {
+  min-width: 50px;
+  height: 50px;
+  padding: 10px;
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  box-shadow: 0 2px 4px hsla(0, 0%, 0%, 0.1);
+  opacity: 0;
+  transform: translateX(-20px);
+  animation: fadeInLeft var(--long-animation-duration) ease-out forwards;
+}
+
+@keyframes fadeInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
